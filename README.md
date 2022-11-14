@@ -20,3 +20,4 @@ To set up the OS icon, create an environmental variable called STARSHIP_DISTRO a
  | ![#4C4C66](https://readme-swatches.vercel.app/4C4C66?style=round) | `#4C4C66` | ![#3785A4](https://readme-swatches.vercel.app/3785A4?style=round) | `#3785A4` | ![#92393E](https://readme-swatches.vercel.app/92393E?style=round) | `#92393E` |
  | ![#4A4A64](https://readme-swatches.vercel.app/4A4A64?style=round) | `#4A4A64` | ![#3982A9](https://readme-swatches.vercel.app/3982A9?style=round) | `#3982A9` | ![#93393F](https://readme-swatches.vercel.app/93393F?style=round) | `#93393F` |
  | ![#484861](https://readme-swatches.vercel.app/484861?style=round) | `#484861` | ![#3A7EAE](https://readme-swatches.vercel.app/3A7EAE?style=round) | `#3A7EAE` | ![#98393F](https://readme-swatches.vercel.app/98393F?style=round) | `#98393F` |
+# starship-preset
