@@ -1,0 +1,137 @@
+# First Color: #5A5A79
+# Second Color: #585877
+# Third Color: #565674
+# Fourth Color: #535370
+# Fifth Color: #50506C
+# Sixth Color: #4C4C66
+# Seventh Color: #4A4A64
+# Eigth Color: #484861
+
+# Text Color: Dark - #272D37 | Light - #D8D8EF
+
+format = """
+[](#5A5A79)\
+$env_var\
+[](fg:#5A5A79 bg:#585877)\
+$username\
+[](fg:#585877 bg:#565674)\
+$directory\
+[](fg:#565674 bg:#535370)\
+$c\
+$golang\
+$python\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$rust\
+$conda\
+[](fg:#535370 bg:#50506C)\
+$docker_context\
+[](fg:#50506C bg:#4C4C66)\
+$git_branch\
+[](fg:#4C4C66 bg:#4A4A64)\
+$time\
+[](fg:#4A4A64 bg:#484861)\
+$cmd_duration\
+[ ](fg:#484861)\
+"""
+
+
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+
+[env_var.STARSHIP_DISTRO]
+style = 'bg:#5A5A79 fg:#D8D8EF'
+variable = "STARSHIP_DISTRO"
+default = " "
+format = '[ ]($style)'
+
+[username]
+show_always = true
+style_user = "bg:#585877 fg:#D8D8EF"
+style_root = "bg:#585877 fg:#D8D8EF"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:#565674 fg:#D8D8EF"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[c]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#50506C fg:#D8D8EF"
+format = '[ $symbol $context ]($style) $path'
+
+[git_branch]
+symbol = " "
+style = "bg:#4C4C66 fg:#D8D8EF"
+format = '[ $symbol $branch ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
+format = '[ $symbol  ($version)]($style)[(\($virtualenv\)) ](bg:#535370 fg:#D8D8EF)'
+
+[conda]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+ignore_base = false
+format = '[ $symbol ($environment) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#4A4A64 fg:#D8D8EF"
+format = '[ $time ]($style)'
+
+[cmd_duration]
+style = "bg:#484861 fg:#D8D8EF"
+format = '[ $duration ]($style)'
