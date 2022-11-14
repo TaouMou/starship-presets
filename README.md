@@ -1,7 +1,5 @@
 # Starship Prompt
-This repository contains my starship presets configuration.
-
-For Starship on Windows 10 using the Windows Terminal, this is the current configuration of my command prompt:
+This repository contains some starship presets.
 
 For icons and geometric shapes, use a Nerd Font (I personnaly use FiraCode or JetBrains Mono): https://www.nerdfonts.com/font-downloads
 
