@@ -93,7 +93,7 @@ format = '[ $symbol  ($version) ]($style)'
 symbol = " "
 style = "bg:#358CA0 fg:#CBF4F8"
 python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
-format = '[ $symbol  ($version)]($style)[(\($virtualenv\)) ](bg:#358CA0 fg:#CBF4F8)'
+format = '[ $symbol  ($version)]($style)[ (\($virtualenv\)) ](bg:#358CA0 fg:#CBF4F8)'
 
 [conda]
 symbol = " "
