@@ -1,22 +1,22 @@
-# First Color: #5A5A79
-# Second Color: #585877
-# Third Color: #565674
-# Fourth Color: #535370
-# Fifth Color: #50506C
-# Sixth Color: #4C4C66
-# Seventh Color: #4A4A64
-# Eigth Color: #484861
+# First Color: #6E43C4
+# Second Color: #6A3EC0
+# Third Color: #693CBC
+# Fourth Color: #663AB7
+# Fifth Color: #6238B1
+# Sixth Color: #6037AC
+# Seventh Color: #5D36A6
+# Eigth Color: #5A359E
 
-# Text Color: Dark - #272D37 | Light - #D8D8EF
+# Text Color: Dark - #272D37 | Light - #F2EBFF
 
 format = """
-[](#5A5A79)\
+[](#6E43C4)\
 $env_var\
-[](fg:#5A5A79 bg:#585877)\
+[](fg:#6E43C4 bg:#6A3EC0)\
 $username\
-[](fg:#585877 bg:#565674)\
+[](fg:#6A3EC0 bg:#693CBC)\
 $directory\
-[](fg:#565674 bg:#535370)\
+[](fg:#693CBC bg:#663AB7)\
 $c\
 $golang\
 $python\
@@ -26,15 +26,15 @@ $julia\
 $nodejs\
 $rust\
 $conda\
-[](fg:#535370 bg:#50506C)\
+[](fg:#663AB7 bg:#6238B1)\
 $docker_context\
-[](fg:#50506C bg:#4C4C66)\
+[](fg:#6238B1 bg:#6037AC)\
 $git_branch\
-[](fg:#4C4C66 bg:#4A4A64)\
+[](fg:#6037AC bg:#5D36A6)\
 $time\
-[](fg:#4A4A64 bg:#484861)\
+[](fg:#5D36A6 bg:#5A359E)\
 $cmd_duration\
-[ ](fg:#484861)\
+[ ](fg:#5A359E)\
 """
 
 
@@ -44,19 +44,19 @@ add_newline = true
 
 
 [env_var.STARSHIP_DISTRO]
-style = 'bg:#5A5A79 fg:#D8D8EF'
+style = 'bg:#6E43C4 fg:#F2EBFF'
 variable = "STARSHIP_DISTRO"
-default = " "
-format = '[ ]($style)'
+default = " "
+format = '[$env_value]($style)'
 
 [username]
 show_always = true
-style_user = "bg:#585877 fg:#D8D8EF"
-style_root = "bg:#585877 fg:#D8D8EF"
+style_user = "bg:#6A3EC0 fg:#F2EBFF"
+style_root = "bg:#6A3EC0 fg:#F2EBFF"
 format = '[ $user ]($style)'
 
 [directory]
-style = "bg:#565674 fg:#D8D8EF"
+style = "bg:#693CBC fg:#F2EBFF"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -71,67 +71,67 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#50506C fg:#D8D8EF"
+style = "bg:#6238B1 fg:#F2EBFF"
 format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
 symbol = " "
-style = "bg:#4C4C66 fg:#D8D8EF"
+style = "bg:#6037AC fg:#F2EBFF"
 format = '[ $symbol $branch ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [python]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
-format = '[ $symbol  ($version)]($style)[(\($virtualenv\)) ](bg:#535370 fg:#D8D8EF)'
+format = '[ $symbol  ($version)]($style)[(\($virtualenv\)) ](bg:#663AB7 fg:#F2EBFF)'
 
 [conda]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 ignore_base = false
 format = '[ $symbol ($environment) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [nodejs]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [rust]
 symbol = " "
-style = "bg:#535370 fg:#D8D8EF"
+style = "bg:#663AB7 fg:#F2EBFF"
 format = '[ $symbol  ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#4A4A64 fg:#D8D8EF"
+style = "bg:#5D36A6 fg:#F2EBFF"
 format = '[ $time ]($style)'
 
 [cmd_duration]
-style = "bg:#484861 fg:#D8D8EF"
+style = "bg:#5A359E fg:#F2EBFF"
 format = '[ $duration ]($style)'

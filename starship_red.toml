@@ -46,8 +46,8 @@ add_newline = true
 [env_var.STARSHIP_DISTRO]
 style = 'bg:#873739 fg:#F3D3D3'
 variable = "STARSHIP_DISTRO"
-default = " "
-format = '[ ]($style)'
+default = " "
+format = '[$env_value]($style)'
 
 [username]
 show_always = true
