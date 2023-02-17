@@ -1,0 +1,207 @@
+format = """
+$os$username$directory\
+$c$golang$python$haskell$java$julia$nodejs$rust$conda\
+[](fg:fourth bg:fifth)\
+$docker_context[](fg:fifth bg:sixth)\
+$git_branch$git_status[](fg:sixth bg:seventh)\
+$time$cmd_duration$character\
+"""
+
+# Palettes:
+#   opal: sky blue.
+#   amethyst: purple.
+#   ruby: red.
+# To change the colors: change to the corresponding palette.
+
+palette = "ruby"
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+
+[palettes.opal]
+first = "#38959E"
+second = "#37929D"
+third = "#358F9B"
+fourth = "#358CA0"
+fifth = "#3689A2"
+sixth = "#3785A4"
+seventh = "#3982A9"
+eighth = "#3A7EAE"
+# Text color:
+black = "#272D37"
+white = "#CBF4F8"
+github = "#B02B10"
+
+[palettes.amethyst]
+first = "#6E43C4"
+second = "#6A3EC0"
+third = "#693CBC"
+fourth = "#663AB7"
+fifth = "#6238B1"
+sixth = "#6037AC"
+seventh = "#5D36A6"
+eighth = "#5A359E"
+# Text color:
+black = "#272D37"
+white = "#F2EBFF"
+github = "#B02B10"
+
+[palettes.ruby]
+first = "#873739"
+second = "#8B383B"
+third = "#8D393C"
+fourth = "#8F393D"
+fifth = "#91393E"
+sixth = "#92393E"
+seventh = "#93393F"
+eighth = "#98393F"
+# Text color:
+black = "#272D37"
+white = "#F2EBFF"
+github = "#450920"
+
+[os]
+format = "[](first)[$symbol]($style)[](fg:first bg:second)"
+style = "bg:first fg:white"
+disabled = false
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[username]
+show_always = true
+style_user = "bg:second fg:white"
+style_root = "bg:second fg:white"
+format = '[$user]($style)[](fg:second bg:third)'
+
+[directory]
+style = "bg:third fg:white"
+format = "[   $path ]($style)($style)[$read_only]($read_only_style)[](fg:third bg:fourth)"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[directory.substitutions]
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[c]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[golang]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[python]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
+format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:fourth fg:white)'
+
+[conda]
+symbol = " "
+style = "bg:fourth fg:white"
+ignore_base = false
+format = '[$symbol ($environment) ]($style)'
+
+[haskell]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[java]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[julia]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[nodejs]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[rust]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+format = '[$symbol($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:fifth fg:white"
+format = '[$symbol $context ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:sixth fg:white"
+format = '[$symbol $branch ]($style)'
+
+[git_status]
+format = '([\($all_status$ahead_behind\) ]($style))'
+style = "bold bg:sixth fg:github"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:seventh fg:white"
+format = '[  $time]($style)[](fg:seventh bg:eighth)'
+
+[cmd_duration]
+style = "bg:eighth fg:white"
+format = '[  $duration ]($style)'
+
+[character]
+success_symbol = "[](fg:eighth bg:eighth)[](fg:eighth)"
+error_symbol = "[](fg:eighth bg:error)[](fg:error)"

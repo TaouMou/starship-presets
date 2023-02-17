@@ -1,0 +1,140 @@
+format = """\
+[╭╴](fg:arrow)$username$directory$time$conda\
+$all[╰─](fg:arrow)$character\
+"""
+
+add_newline = true
+palette = "normal"
+
+[palettes.normal]
+arrow = "#353535"
+directory = "#3F37C9"
+node = "green"
+time = "#177E89"
+github = "#B02B10"
+github_dark = "#171515"
+python = "#3776AB"
+conda = "#3EB049"
+java = "#861215"
+rust = "#C33C00"
+duration = "yellow"
+os = "#3778BF"
+os_admin = "#6A040F"
+white = "#EDF2F4"
+
+[username]
+style_user = 'os'
+style_root = 'os_admin'
+format = '[]($style)[ $user](bg:$style fg:white)[]($style)'
+disabled = false
+show_always = true
+
+[character]
+success_symbol = "[󰍟](fg:arrow)"
+error_symbol = "[󰍟](fg:red)"
+
+[directory]
+format = " [](fg:directory)[  $path ]($style)[$read_only]($read_only_style)[](fg:directory)"
+truncation_length = 2
+style = "fg:white bg:directory"
+read_only_style = "fg:white bg:directory"
+before_repo_root_style = "fg:white bg:directory"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[time]
+disabled = false
+format = " [](fg:time)[ $time]($style)[](fg:time)"
+time_format = "%H:%M"
+style = "bg:time"
+
+[cmd_duration]
+format = " [](fg:duration)[ $duration]($style)[](fg:duration)"
+style = "bold bg:duration fg:#000000"
+min_time = 500
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[git_branch]
+format = " [](fg:github)[$symbol$branch](bg:github fg:#000000)[](fg:github)"
+symbol = " "
+
+[git_status]
+format = '([ ](fg:github_dark)[ $all_status$ahead_behind ]($style)[](fg:github_dark))'
+style = "bold fg:github bg:github_dark"
+
+[docker_context]
+disabled=true
+symbol = " "
+
+[package]
+disabled=true
+symbol = " "
+
+[java]
+format = "[ ](fg:java)[$symbol$version](bg:java)[](fg:java)"
+version_format = "${raw}"
+symbol = " "
+
+[nodejs]
+format = "[ ](fg:node)[$symbol$version](bg:node fg:#000000)[](fg:node)"
+symbol = " "
+version_format = "${raw}"
+disabled=false
+
+[rust]
+format = "[ ](fg:rust)[$symbol$version](bg:rust fg:#000000)[](fg:rust)"
+symbol = " "
+version_format = "${raw}"
+disabled=false
+
+[python]
+disabled=false
+format = '[ ](fg:python)[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)[](fg:python)'
+symbol = " "
+version_format = "${raw}"
+style = "bold bg:python"
+
+[conda]
+format = "[ ](fg:conda)[$symbol$environment]($style)[](fg:conda)"
+style = "bold bg:conda fg:#000000"
+ignore_base = false
+disabled=false
+symbol = " "
