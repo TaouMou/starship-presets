@@ -5,9 +5,6 @@ For icons and geometric shapes, use a Nerd Font (I personnaly use FiraCode or Je
 
 ![Prompt](./screenshot.png)
 
-To set up the OS icon, create an environmental variable called STARSHIP_DISTRO and give it the icon of your OS as value. 
-(How to find the icon of you OS: https://www.nerdfonts.com/cheat-sheet)
-
  | Colors | Hex Code | Colors | Hex Code | Colors | Hex Code
  | :---: | :---: | :---: | :---: | :---: | :---: |
  | ![#5A5A79](https://readme-swatches.vercel.app/5A5A79?style=round) | `#5A5A79` | ![#38959E](https://readme-swatches.vercel.app/38959E?style=round) | `#38959E` | ![#873739](https://readme-swatches.vercel.app/873739?style=round) | `#873739` |
