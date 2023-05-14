@@ -1,10 +1,29 @@
 format = """
-$os$username$directory\
-$c$golang$python$haskell$java$julia$nodejs$rust$conda\
+$os\
+$username\
+$directory\
+(\
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $golang\
+    $haskell\
+    $java\
+    $julia\
+    $rust\
+)\
 [](fg:fourth bg:fifth)\
-$docker_context[](fg:fifth bg:sixth)\
-$git_branch$git_status[](fg:sixth bg:seventh)\
-$time$cmd_duration$character\
+$docker_context\
+[](fg:fifth bg:sixth)\
+(\
+    $git_branch\
+    $git_status\
+)\
+[](fg:sixth bg:seventh)\
+$time\
+$cmd_duration\
+$character\
 """
 
 # Palettes:
@@ -15,7 +34,7 @@ $time$cmd_duration$character\
 
 palette = "ruby"
 
-# Disable the blank line at the start of the prompt
+# Disables the blank line at the start of the prompt
 add_newline = true
 
 
