@@ -1,14 +1,35 @@
 format = """\
-[╭╴](fg:arrow)$username$git_branch$directory$cmd_duration\
-$python$conda$nodejs
+[╭╴](fg:arrow)\
+$username\
+$os\
+$git_branch\
+(\
+    at \
+    $directory\
+)\
+$cmd_duration\
+(\
+    via \
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $rust\
+    $java\
+)
 [╰─](fg:arrow)$character\
 """
+# Add the modules you need
 
+# Disable the blank line at the start of the prompt
 add_newline = true
+
+
 palette = "normal"
 
+
 [palettes.normal]
-arrow = "#FBFBFB"
+arrow = "#333533"
 os = "#16f4d0"
 os_admin = "#e4ff1a"
 directory = "#9ffff5"
@@ -18,12 +39,14 @@ git = "#f17f29"
 git_status = "#DFEBED"
 python = "#edf67d"
 conda = "#70e000"
-java = "#861215"
-rust = "#C33C00"
-clang = "#00599D"
+java = "#F86279"
+rust = "#ffdac6"
+clang = "#caf0f8"
 duration = "#ce4257"
 text_color = "#EDF2F4"
 text_light = "#26272A"
+
+# I disabled some modules (Rust, Java...) since some things aren't installed in my machine, enable them if you need.
 
 [username]
 style_user = 'bold os'
@@ -32,12 +55,34 @@ format = '[  $user](fg:$style) '
 disabled = false
 show_always = true
 
+[os]
+format = "on [($name)]($style) "
+style = "bold blue"
+disabled = true
+
+[os.symbols]
+Alpine = " "
+Arch = " "
+Debian = " "
+EndeavourOS = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = " "
+NixOS = " "
+openSUSE = " "
+Pop = " "
+SUSE = " "
+Ubuntu = " "
+Windows = " "
+
 [character]
 success_symbol = "[󰍟](fg:arrow)"
 error_symbol = "[󰍟](fg:red)"
 
 [directory]
-format = "at [$path](bold $style)[$read_only]($read_only_style) "
+format = "[$path](bold $style)[$read_only]($read_only_style) "
 truncation_length = 2
 style = "fg:directory"
 read_only_style = "fg:directory"
@@ -53,7 +98,7 @@ time_format = "%H:%M"
 style = "bold fg:time"
 
 [cmd_duration]
-format = "took [ $duration]($style)"
+format = "took [ $duration]($style) "
 style = "bold fg:duration"
 min_time = 500
 
@@ -74,73 +119,47 @@ symbol = " "
 [package]
 disabled=true
 
+[fill]
+symbol = " "
+
 [nodejs]
-format = "via [ $symbol$version ]($style)"
+format = "[ $symbol$version ]($style)"
 style = "bg:node fg:text_light"
-symbol = "󰎙 "
+symbol = " "
 version_format = "${raw}"
 disabled=false
 
 [python]
 disabled=false
-format = 'via [ ${symbol}${pyenv_prefix}(${version})( \($virtualenv\)) ]($style)'
+format = '[ ${symbol}${pyenv_prefix}(${version})( \($virtualenv\)) ]($style)'
 symbol = " "
 version_format = "${raw}"
 style = "bg:python fg:text_light"
 
 [conda]
-format = "[ $symbol$environment ]($style) "
+format = "[ $symbol$environment ]($style)"
 style = "bg:conda fg:text_light"
 ignore_base = false
-disabled=false
+disabled = false
 symbol = " "
 
 [java]
-format = "[$symbol$version](bg:java )"
+format = "[ $symbol$version ]($style)"
+style = "bg:java fg:text_light"
 version_format = "${raw}"
-symbol = " "
+symbol = " "
 disabled = true
 
 [c]
-format = "[$symbol($version(-$name) )](bg:clang )"
+format = "[ $symbol($version(-$name)) ]($style)"
+style = "bg:clang fg:text_light"
 symbol = " "
 version_format = "${raw}"
 disabled=true
 
 [rust]
-format = "(fg:rust)[$symbol$version](bg:rust )"
+format ="[ $symbol$version ]($style)"
+style = "bg:rust fg:text_light"
 symbol = " "
 version_format = "${raw}"
 disabled=true
-
-[os.symbols]
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Gentoo = " "
-Linux = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-openSUSE = " "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = " "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = " "
