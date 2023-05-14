@@ -1,11 +1,33 @@
 format = """\
-[╭╴](fg:arrow)$username$directory$time\
-$python$conda$nodejs$git_branch$git_status$cmd_duration
+[╭╴](fg:arrow)\
+$username\
+$directory\
+$time\
+(\
+    $git_branch\
+    $git_status\
+)\
+(\
+    $python\
+    $conda\
+    $nodejs\
+)\
+$cmd_duration
 [╰─](fg:arrow)$character\
 """
+# Add the modules you need
 
+# Disables the blank line at the start of the prompt
 add_newline = true
-palette = "normal"
+
+
+# Palettes:
+#   old: the previous version.
+#   normal: dark gray / yellow / white palette.
+#   light: pastel light colors.
+# To change the colors: change to the corresponding palette.
+palette = "old"
+
 
 [palettes.old]
 arrow = "#353535"
@@ -15,7 +37,7 @@ directory = "#3F37C9"
 node = "green"
 time = "#177E89"
 git = "#B02B10"
-git_status = "#171515"
+git_status = "#8B1D2C"
 python = "#3776AB"
 conda = "#3EB049"
 java = "#861215"
@@ -23,13 +45,13 @@ rust = "#C33C00"
 clang = "#00599D"
 duration = "yellow"
 text_color = "#EDF2F4"
-text_light = "#26272A"
+text_light = "#EDF2F4"
 
 [palettes.normal]
 arrow = "#353535"
-os = "#21262A"
+os = "#2C3032"
 os_admin = "#6A040F"
-directory = "#2C3032"
+directory = "#363C3E"
 time = "#474D5C"
 node = "#F1DEA9"
 git = "#D0DBDA"
@@ -63,7 +85,7 @@ text_light = "#26272A"
 [username]
 style_user = 'os'
 style_root = 'os_admin'
-format = '[]($style)[  $user](bg:$style fg:text_color)[]($style)'
+format = '[]($style)[  mou](bg:$style fg:text_color)[]($style)'
 disabled = false
 show_always = true
 
