@@ -19,4 +19,4 @@ ___
 ### Preview for Text Prompt:
 ___
 ![Prompt](./assets/screenshot_text.png)
-Some terminal emulators fail to render powerline icons (or some patched nerd fonts) so a vertical gap between the text and the icons will become visible, which annoyed me, so I made this preset with none of those icons, Alacritty is an example, but now there are no gaps.
+Some terminal emulators fail to render powerline icons (or some patched nerd fonts) the way I hope, as a vertical gap between the text background and the icons will become visible, which annoyed me, so I made this preset with none of those icons, Alacritty is an example, and now there are no gaps, as I only use the text background.
